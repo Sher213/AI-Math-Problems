@@ -1,0 +1,101 @@
+LLM-Compatible Rubric for Predicting Math Problem Difficulty and Grade Level (Grades 1 to 12)
+
+Purpose
+
+Extract key features from a brief summary of a math problem
+
+Predict both a difficulty level (Novice, Beginner, Intermediate, Advanced, Expert) and a grade level (G1–G12)
+
+Difficulty Levels and Grade Bands
+1 = Novice (Grades 1–4)
+2 = Beginner (Grades 5–7)
+3 = Intermediate (Grades 8–10)
+4 = Advanced (Grades 11–12)
+5 = Expert (Advanced Grade 12, competition or university prep)
+
+Assessment Criteria (for each problem summary)
+• Grade Alignment: which grade’s curriculum it matches (G1–G12)
+• Conceptual Complexity: how abstract or numerous the concepts are (scale 1–5)
+• Procedural Complexity: how many steps and what kinds of operations are required (scale 1–5)
+• Prior Knowledge: which theorems or skills must be known first (scale 1–5)
+• Problem Structure:
+– Direct versus hidden question
+– Single-step versus multi-step
+– Familiar (routine) versus novel type
+– Abstract versus real-world context
+– Number of variables or quantities to track
+– Unique versus multiple solution paths
+– Presence of distractors or trick elements
+(assign 1–5 points to each sub-item, up to 35 total)
+• Reasoning Type: logical, spatial, quantitative, inductive, etc. (scale 1–5)
+• Time to Solve: expected minutes for a proficient student (<1, 1–5, 5–10, 10–20, >20)
+
+Domains Covered
+
+Arithmetic (Grades 1–6)
+
+Algebra (Grades 6–12)
+
+Geometry (Grades 3–12)
+
+Trigonometry (Grades 9–12)
+
+Pre-Calculus (Grades 10–12)
+
+Calculus (Grades 11–12)
+
+Statistics & Probability (Grades 6–12)
+
+Discrete Math (Grades 9–12)
+
+Number Theory (Grades 7–12)
+
+General Problem-Solving Strategies (Grades 1–12)
+
+Scoring Example
+Prompt summary: “A student solves a quadratic equation by isolating a term, taking the square root, and simplifying.”
+
+Grade Alignment: G8
+
+Conceptual Complexity: 3
+
+Procedural Complexity: 3
+
+Prior Knowledge: 3
+
+Problem Structure subtotal: 14
+
+Reasoning Type: 2
+
+Time to Solve: 3–5 minutes
+→ Total score 28 → Difficulty Intermediate → Grade G8–G9
+
+Sample Summaries and Predictions
+• “Calculate area of triangle given base 10 cm and height 6 cm.” → Novice → Grades G6–G7
+• “Solve sin(x)=√2/2 for x in one period.” → Intermediate → Grades G10–G11
+• “Find domain of 1/(x²−4).” → Intermediate → Grades G11–G12
+• “Differentiate x²·sin(x).” → Advanced → Grade G12
+• “Count permutations of ‘MISSISSIPPI’.” → Expert → Grade G12 / competition level
+
+Usage Workflow
+
+Receive a short problem summary
+
+Extract and score each criterion
+
+Sum all scores
+
+Map the total to a difficulty level and grade range
+
+Total-Score Mapping
+
+8–14 points → Level 1 (Novice), Grades 1–4
+
+15–21 points → Level 2 (Beginner), Grades 5–7
+
+22–28 points → Level 3 (Intermediate), Grades 8–10
+
+29–35 points → Level 4 (Advanced), Grades 11–12
+
+36+ points → Level 5 (Expert), Advanced Grade 12/Competition
+
